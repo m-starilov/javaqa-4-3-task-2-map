@@ -19,10 +19,10 @@ class FileOpenManagerTest {
         @Test
         public void shouldAddNewApp() {
             manager.add(".html", "Google Chrome");
-            Set<Map.Entry<String, String>> actual = manager.getAll();
+            Map<String, String> actual = manager.getAll();
 
             map.put(".html", "Google Chrome");
-            Set<Map.Entry<String, String>> expected = map.entrySet();
+            Map<String, String> expected = map;
 
             assertEquals(expected, actual);
         }
@@ -53,11 +53,11 @@ class FileOpenManagerTest {
         @Test
         public void shouldAddNewApp() {
             manager.add(".FB2", "FBReader");
-            Set<Map.Entry<String, String>> actual = manager.getAll();
+            Map<String, String> actual = manager.getAll();
 
             map.put(".html", "Google Chrome");
             map.put(".fb2", "FBReader");
-            Set<Map.Entry<String, String>> expected = map.entrySet();
+            Map<String, String> expected = map;
 
             assertEquals(expected, actual);
         }
@@ -77,8 +77,8 @@ class FileOpenManagerTest {
 
             assertEquals(expected, actual);
 
-            Set<Map.Entry<String, String>> actualSet = manager.getAll();
-            Set<Map.Entry<String, String>> expectedSet = map.entrySet();
+            Map<String, String> actualSet = manager.getAll();
+            Map<String, String> expectedSet = map;
 
             assertEquals(expectedSet, actualSet);
         }
@@ -101,7 +101,7 @@ class FileOpenManagerTest {
         @Test
         public void shouldAddNewApp() {
             manager.add(".mp3", "WinAmp");
-            Set<Map.Entry<String, String>> actual = manager.getAll();
+            Map<String, String> actual = manager.getAll();
 
             map.put(".html", "Firefox");
             map.put(".7z", "WinRAR");
@@ -111,7 +111,7 @@ class FileOpenManagerTest {
             map.put(".fb2", "FBReader");
             map.put(".xls", "Microsoft Excel");
             map.put(".mp3", "WinAmp");
-            Set<Map.Entry<String, String>> expected = map.entrySet();
+            Map<String, String> expected = map;
 
             assertEquals(expected, actual);
         }
@@ -131,7 +131,7 @@ class FileOpenManagerTest {
 
             assertEquals(expected, actual);
 
-            Set<Map.Entry<String, String>> actualSet = manager.getAll();
+            Map<String, String> actualSet = manager.getAll();
             
             map.put(".7z", "WinRAR");
             map.put(".gif", "Microsoft Photo Editor");
@@ -139,7 +139,7 @@ class FileOpenManagerTest {
             map.put(".mp4", "VLC media player");
             map.put(".fb2", "FBReader");
             map.put(".xls", "Microsoft Excel");
-            Set<Map.Entry<String, String>> expectedSet = map.entrySet();
+            Map<String, String> expectedSet = map;
             
             assertEquals(expectedSet, actualSet);
         }

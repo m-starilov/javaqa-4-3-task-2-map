@@ -9,8 +9,8 @@ public class FileOpenManager {
         hashMap.put(ext.toLowerCase(), app);
     }
 
-    public Set<Map.Entry<String, String >> getAll() {
-        return hashMap.entrySet();
+    public Map<String, String > getAll() {
+        return hashMap;
     }
 
     public List<String> getAllSortedExt(){
@@ -26,10 +26,10 @@ public class FileOpenManager {
     }
 
     public String findAppByExt(String ext) {
-        return hashMap.get(ext);
+        return hashMap.get(ext.toLowerCase());
     }
 
     public String deleteExt(String ext) {
-        return hashMap.remove(ext);
+        return hashMap.remove(ext.toLowerCase());
     }
 }
